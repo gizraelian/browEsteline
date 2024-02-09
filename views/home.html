@@ -1,0 +1,44 @@
+
+<div class="hero-section">
+    
+    <container class="hero-container">
+        <h1 class="hero-heading">Medical Aesthetics & Laser Services</h1>
+    </container>
+    
+    <div class="home-service-links-container">
+        
+        <a class="home-service-link-box" href="#!/service-tattoo-removal">
+            <h3 class="home-service-link-heading"> Tattoo Removal </h3>
+            <div class="home-service-links" style="background-image: url('/assets/img-tatt-low.png');"></div>
+        </a>
+
+        <a class="home-service-link-box" href="#!/service-pmu">
+            <h3 class="home-service-link-heading"> Permanent Makeup </h3>
+            <div class="home-service-links" style="background-image: url('/assets/img-permanent-makeup-low.png');" \></div>
+        </a>
+        
+        <div class="home-service-link-box" ng-click="showHairRemovalMenu()">
+
+            <h3 class="home-service-link-heading"> Hair Removal</h3>
+
+            <div class="home-service-link-additionalMenu" ng-show="hairRemovalMenuVisible">
+                <a class="home-service-additional-link" href="#!/service-hair-removal-men"><h3>Hair Removal For Men</h3></a>
+                <a class="home-service-additional-link" href="#!/service-hair-removal-women"><h3>Hair Removal For Women</h3></a>
+            </div>
+            
+            <div class="home-service-links" ng-show="!hairRemovalMenuVisible" style="background-image: url('/assets/img-hair-rem-low.png');"></div>
+            
+            <!-- <div class="home-service-links">
+                <img src="assets/img-hair-rem-low.png" alt="Logo" style="width:100%;">
+            </div> -->
+
+            <!-- <div class="home-service-link-additionalMenu" ng-show="hairRemovalMenuVisible">
+                <a class="home-service-additional-link" href="#!/service-hair-removal-men"><h3>Hair Removal For Men</h3></a>
+                <a class="home-service-additional-link" href="#!/service-hair-removal-women"><h3>Hair Removal For Women</h3></a>
+            </div> -->
+
+        </div>
+
+    </div>
+
+</div>

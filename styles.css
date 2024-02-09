@@ -1,0 +1,1150 @@
+body {
+    font-family: "Helvetica", sans-serif;
+    margin:0;
+}
+
+/*
+
+  @media (max-width: 992px) {
+    #textArrowBox {
+      top: 65%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #textArrowBox {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #textArrowBox {
+      top: 60%;
+    }
+  }
+
+*/
+
+/* background: deepskyblue; */
+
+/* Styles for the hero section and service backgrounds */
+.hero-section, .service-background {
+    /* border: orangered dashed medium; */
+
+    /* background-color: #F5F5F5; */
+    /* background-color: whitesmoke; */
+    text-align: center;
+    /* padding: 20px; */
+    /* margin-bottom:10vh; */
+    color: white;
+}
+.hero-container {
+    /* border: orangered dashed medium; */
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    margin: auto;
+    height: 40vh;
+    margin-bottom:40px;
+
+    background-image: url('/assets/hero-image.png');
+    background-size: cover;
+    border-radius: 2px;
+}
+
+.hero-heading {
+    color: #704f61; 
+    background-color: #bca9a4; 
+    padding: 20px;
+    border-radius: 2px;
+    margin-bottom: 40px;
+    /* font-size: 2em; */
+
+    /* border: orangered dashed medium; */
+}
+
+.home-service-links-container {
+    /* padding: 20px; */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap:wrap;
+    -webkit-flex-wrap: wrap;
+
+    /* border: darkgoldenrod dashed thin; */
+    
+}
+
+.home-service-link-box {
+    /* border: blue dashed thin; */
+    text-decoration:none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* overflow: hidden; */
+}
+
+.home-service-link-heading {
+    color: #704f61;
+}
+
+.home-service-links {
+    /* width: 300px; */
+    width: 400px;
+    height: 250px;
+    background-size: cover;
+    border-radius: 4px;
+
+    /* border: orangered dashed medium; */
+}
+
+.home-service-link-additionalMenu {
+    /* border: orangered dashed medium; */
+
+    width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/assets/img-hair-rem-low.png');
+    background-size: cover;
+    border-radius: 4px;
+    text-align: left;
+    
+}
+
+.home-service-additional-link {
+    /* border: orange dashed thin; */
+
+    background-color: white;
+    color: #704f61;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.home-service-additional-link:hover {
+    background-color: #bca9a4; 
+}
+
+.service-background {
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.service-one-section {
+    /* background-image: url('/assets/pmu-background.png'); */
+    background-color: lightgrey;
+    background-size: cover;
+    text-align: center;
+    min-height: 70vh;
+    padding: 40px 20px;
+    margin-bottom:10vh;
+    color: white;
+}
+
+.service-one-heading {
+    color: #704f61; 
+}
+
+.service-one-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    justify-content: space-evenly;
+    /* border: orangered dashed medium; */
+}
+
+.service-one-sectionBox {
+
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    width:100%;
+}
+
+.service-one-listItemBox {
+    /* margin: 10px 0; */
+    margin: 10px;
+    padding:10px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.service-one-listItemHeading {
+    color: #704f61;
+}
+
+.service-one-listItemImg {
+    width:250px;
+    height:300px;
+    background-size: cover;
+}
+
+.service-two-section {
+    background-image: url('/assets/pmu-background.png');
+    background-size: cover;
+    text-align: center;
+    min-height: 70vh;
+    padding: 40px 20px;
+    margin-bottom:10vh;
+
+}
+
+.service-two-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10%;
+
+    margin-left: auto;
+    margin-right: auto;
+    /* width:60%; */
+
+    /* border: orangered dashed medium; */
+}
+
+.service-two-listItemBox {
+    margin:10px;
+    padding:10px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.service-two-listItemHeading {
+    color: #704f61;
+}
+
+.service-two-listItemImg {
+    width:200px;
+    height:200px;
+    background-size: cover;
+}
+
+.service-hairRemMen-section-one {
+    background-color:#704f61;
+    background-size: cover;
+    text-align: center;
+    min-height: 70vh;
+    width:100%;
+    padding: 40px 0;
+    color: white;
+}
+
+.service-hairRemMen-section-one-main-heading {
+    color:black;
+    margin:0;
+}
+
+.service-hairRemMen-section-one-heading-box {
+    display:flex; 
+    flex-direction: column; 
+    align-items: start;
+    padding: 20px 300px; 
+
+    /* border: blue dashed medium; */
+}
+
+.service-hairRemMen-section-one-content-box {
+    display:flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+
+    /* border:green dashed medium; */
+}
+
+.service-hairRemMen-section-one-text-box {
+    color:lightgrey;
+    width:30%;
+
+    text-align: left; 
+    padding:20px 100px;
+
+    font-size:1.1rem;
+
+    /* border:red dashed thin; */
+}
+
+.service-hairRemMen-section-one-img-box {
+    padding:20px;
+
+    /* border:red dashed thin; */
+}
+
+.service-hairRemMen-section-one-content-img {
+    padding:10px;
+}
+
+.service-hairRemMen-section-two {
+    background-color:lightgrey;
+    background-size: cover;
+    text-align: center;
+    min-height: 70vh;
+    width:100%;
+    padding: 40px 0;
+    color: #704f61;
+
+    /* border: orangered dashed medium; */
+
+}
+
+.service-hairRemMen-section-two-main-heading {
+    text-align: left; 
+    padding:20px 100px;
+}
+
+.service-hairRemMen-section-two-main-content-box {
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap-reverse;
+    /* border: orangered dashed medium; */
+}
+
+.service-hairRemMen-section-two-content-img-box {
+    display:flex;
+    padding:20px;
+    /* width:30%; */
+    width:300px;
+}
+
+.service-hairRemMen-section-two-main-content-img {
+    width:300px;
+    height:400px;
+    object-fit: cover;
+}
+
+.service-hairRemMen-section-two-content-box {
+    display:flex; 
+    text-align: left;
+    flex-wrap: wrap;
+    /* width:100%; */
+    /* border: orangered dashed medium; */
+}
+
+.service-hairRemMen-section-two-central-box {
+    display:flex;
+    flex-direction: column; 
+    justify-content: start; 
+    /* width:30%; */
+    width:400px;
+    padding:20px;
+    /* border: brown dashed medium; */
+}
+
+.service-hairRemMen-section-two-privacy-statement-box {
+    display:flex; 
+    flex-direction: column; 
+    align-items: center;
+    padding:20px;
+    /* border: green dashed thin; */
+}
+
+.service-hairRemMen-section-two-privacy-statement-heading {
+    font-size: 1.2em;
+    text-align: center; 
+    padding:10px;
+}
+
+.service-hairRemMen-section-two-privacy-statement-subHeading {
+    text-align: center; 
+    padding:10px;
+}
+
+.service-hairRemMen-section-two-right-box {
+    display:flex;
+    flex-direction: column; 
+    justify-content: start; 
+    /* width:40%; */
+    width:500px;
+    padding:20px;
+    /* border: brown dashed medium; */
+}
+
+.service-hairRemMen-section-two-right-img-box {
+    display:flex;
+    flex-direction:row; 
+    /* flex-wrap:wrap; */
+    justify-content: center; 
+    align-items: center; 
+    overflow:hidden;
+}
+
+.service-hairRemMen-section-two-content-img {
+    width:125px;
+    height:200px;
+    object-fit: cover;
+}
+
+.service-hairRemMen-section-three {
+    background-color:#704f61;
+    background-size: cover;
+    text-align: center;
+    min-height: 70vh;
+    width:100%;
+    padding: 40px 0;
+    /* color: white; */
+    color: lightgrey;
+}
+
+.service-hairRemMen-section-three-img-box {
+    /* border:orangered dashed medium; */
+
+    display:flex;
+    justify-content: center;
+}
+
+.service-hairRemMen-section-three-content-img {
+    width:400px;
+    height:400px;
+    border-radius: 12px;
+    object-fit: cover;
+    padding:8px;
+}
+
+.service-hairRemMen-section-three-text-box { 
+    /* border:orangered dashed medium; */
+    
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    flex-wrap:wrap;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.service-hairRemMen-section-three-list-column {
+    width:auto;
+}
+
+.service-hairRemMen-section-four {
+    /* background-color:whitesmoke; */
+    background-image: url('/assets/hair-removal-men-section4-background.png');
+    background-size: cover;
+    text-align: center;
+    min-height: 70vh;
+    width:100%;
+    padding: 40px 0;
+    color: #704f61;
+
+    display:flex;
+    flex-direction: column;
+}
+
+.service-hairRemMen-section-four-main-text-box {
+    /* border: orangered dashed medium; */
+
+    width:70%;
+    text-align: left;
+
+    display: flex;
+    flex-wrap:wrap;
+
+    font-size: 1.2em;
+}
+
+.service-hairRemMen-section-four-text-column {
+    /* border: blue dashed thin; */
+
+    padding:20px;
+}
+
+.service-hairRemWomen-section-one {
+    background-color:white;
+    background-size: cover;
+    text-align: center;
+    /* min-height: 70vh; */
+    width:100%;
+    /* padding: 40px 0; */
+    padding: 0 0 40px 0;
+    color: #704f61;
+
+    /* border: goldenrod dashed medium; */
+}
+
+.service-hairRemWomen-section-one-background-video {
+    /* border: orangered dashed medium; */
+
+    width:100%;
+    z-index:-1;
+
+}
+
+.service-hairRemWomen-section-one-heading {
+    /* border: orangered dashed medium; */
+
+    position: absolute;
+    /* bottom: 0; */
+    /* bottom: 65vh; */
+    bottom: 75vh;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    /* z-index: -1; */
+
+}
+
+.service-hairRemWomen-section-two {
+    background-color:white;
+    /* background-image: url('/assets/hair-removal-women-section2-background.png'); */
+    background-size: cover;
+
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+
+    text-align: center;
+    min-height: 70vh;
+    width:100%;
+    padding: 40px 0;
+    color: #704f61;
+
+    /* border: goldenrod dashed medium; */
+}
+
+.service-hairRemWomen-section-two-main-heading {
+    /* border: orangered dashed medium; */
+
+    text-transform:uppercase;
+    font-weight: lighter;
+    /* text-decoration: underline; */
+}
+
+.service-hairRemWomen-section-two-container {
+    /* border: orangered dashed medium; */
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+.service-hairRemWomen-section-two-left-content-box {
+    /* border: brown dashed medium; */
+
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:60%;
+    padding:20px;
+}
+
+.service-hairRemWomen-section-two-content-img {
+    /* width:600px; */
+    /* height:350px; */
+    width:450px;
+    height:250px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.service-hairRemWomen-section-two-right-content-box {
+    /* border: goldenrod dashed medium; */
+
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: 1.1em;
+
+    padding:20px;
+
+}
+
+.service-hairRemWomen-section-two-left-text-box {
+    /* border: goldenrod dashed medium; */
+
+    width: 55%;
+    font-size: 1.1em;
+    /* font-weight: lighter; */
+}
+
+.service-hairRemWomen-section-three {
+    /* background-color:lightgrey; */
+    background-image: url('/assets/hair-removal-women-section3-background.png');
+    background-size: cover;
+    text-align: center;
+    min-height: 70vh;
+    width:100%;
+    padding: 40px 0;
+    color: #704f61;
+
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.service-hairRemWomen-section-three-left-content-box {
+    /* border: orangered dashed medium; */
+    width:60%;
+}
+
+.service-hairRemWomen-section-three-right-content-box {
+    /* border: goldenrod dashed medium; */
+
+    width:40%;
+}
+
+.service-hairRemWomen-section-three-main-heading {
+    text-align: left;
+    padding:20px;
+    font-weight: lighter;
+}
+
+.service-hairRemWomen-section-three-text-container {
+    /* border: blue dashed medium; */
+
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.service-hairRemWomen-section-three-text-box {
+    /* border: orangered dashed thin; */
+    width:400px;
+    /* width:40%; */
+    padding:0 20px;
+    text-align: left;
+    font-size:1.1em;
+}
+
+.service-hairRemWomen-section-three-prices-heading {
+    /* border: orangered dashed thin; */
+    
+}
+
+.service-hairRemWomen-section-four {
+    /* background-color:lightgrey; */
+
+    background-image: url('/assets/hair-removal-women-section4-background.png');
+
+    background-size: cover;
+    text-align: center;
+    min-height: 70vh;
+    width:100%;
+    padding: 40px 0;
+    color: #704f61;
+
+    /* border: orangered dashed thin; */
+}
+
+.service-hairRemWomen-section-four-main-heading {
+    color:white;
+}
+
+.service-hairRemWomen-section-four-img-box {
+    display:flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.service-hairRemWomen-section-four-content-img {
+    width:400px;
+    height:400px;
+    border-radius: 12px;
+    object-fit: cover;
+    padding:8px;
+}
+
+.service-hairRemWomen-section-four-text-box {
+    /* border: orangered dashed thin; */
+
+    font-size:1.1em;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top:20px;
+}
+
+.service-hairRemWomen-section-four-list-column {
+    /* background-color: white; */
+    
+    /* padding:20px 40px; */
+    color:white;
+}
+
+/* Flexbox styling for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* border: goldenrod dashed medium; */
+}
+
+.nav-left, .nav-right-desktop {
+    display: flex;
+}
+
+.nav-right-mobile {
+    display:none;
+}
+
+.hamburger-box {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.nav-dropdown-content {
+    position: relative;
+    background-color: white;
+    position: absolute;
+    /* top:70px; */
+    top:4.6rem;
+    display: flex;
+    flex-direction: column;
+    /* border-radius: 8px; */
+    z-index:999;
+
+    /* border: orangered dashed medium; */
+}
+
+.nav-dropdown-link {
+    padding: 20px;
+    color: #704f61;
+    /* background-color: #bca9a4;  */
+    text-decoration: none;
+    font-size:1.2em;
+
+}
+
+.nav-dropdown-link:hover {
+    background-color: #bca9a4; 
+}
+
+.nav-left {
+    /* width:100%; */
+    justify-content: center;
+}
+
+.nav-link {
+    color: #704f61;
+    text-decoration: none;
+    padding: 10px 20px;
+    /* font-size: 18px; */
+    font-size:1.2em;
+    /* cursor: pointer; */
+    border-radius: 4px;
+    border: 0;
+    background-color: white;
+
+
+}
+
+.nav-link:hover {
+    /* background-color: #ddd; */
+    background-color: #bca9a4;
+    border-radius: 4px;
+    color: black;
+}
+
+.nav-link-logo {
+    padding: 10px 20px;
+}
+
+.nav-link-logo-mobile {
+    display: none;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
+    /* border: goldenrod dashed medium; */
+}
+
+.contact-left, .contact-right {
+    flex: 1;
+    padding: 20px;
+    /* font-size: 1em; */
+    font-size:1.2em;
+    
+    /* border: darkmagenta dashed medium; */
+}
+
+.contact-left {
+    border-right: 1px solid #ddd;
+}
+
+
+
+.contact-container {
+    color: #704f61;
+}
+
+
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer-container {
+    text-align: center; 
+    color: #704f61;
+    margin-top:40px;
+}
+
+@media (max-width: 992px) {
+    .hero-heading {
+        margin-bottom: 100px;
+        padding:40px 20px;
+        font-size: 3em;
+    }
+    .home-service-links {
+        width: 900px;
+        height: 500px;
+    }
+
+    .home-service-link-heading {
+        font-size: 3em;
+    }
+
+    .home-service-link-additionalMenu {
+        font-size: 2.2em;
+        /* width: auto; */
+        /* border: orangered dashed medium; */
+        /* bottom: -20px; */
+
+        width: 900px;
+        height: 500px;
+    }
+
+    .home-service-additional-link {
+        /* border: orange dashed thin; */
+    }
+
+    .contact-container {
+        flex-wrap:wrap;
+    }
+    .contact-left, .contact-right {
+        /* flex:auto; */
+        font-size: 2.2em;
+        /* text-align: center; */
+    }
+    .contact-right {
+        text-align: center;
+    }
+    .map-heading{
+        text-align:left;
+    }
+    .nav-link {
+        font-size:2.7em;
+        padding: 40px 80px;
+    }
+    .nav-link-logo {
+        display: none;
+    }
+    .navbar {
+        /* border: orangered dashed medium; */
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+    }
+    .nav-left {
+        /* border: orangered dashed medium; */
+        /* justify-content: center; */
+    }
+    .nav-right-desktop {
+        display:none;
+    }
+    .nav-right-mobile {
+        display: block;
+        /* position:fixed; */
+        right:0;
+        background-color: white;
+        /* border: orangered dashed medium; */
+    }
+
+    .hamburger-box {
+        /* border: orangered dashed medium; */
+        display: block;
+        padding: 20px;
+        /* margin: 0 200px; */
+        /* padding: 0 200px; */
+    }
+
+    .hamburger-icon {
+        /* border: blue dashed medium; */
+        width:80%;
+    }
+
+    .nav-link-logo-mobile {
+        display:block;
+        /* padding: 20px; */
+    }
+
+    .nav-mobile-content {
+        /* position: relative; */
+        /* border: orangered dashed medium; */
+
+        background-color: white;
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        /* border-radius: 8px; */
+        border-radius: 0 0 8px 8px;
+        z-index:999;
+    }
+
+    .service-one-heading {
+        font-size:3em;
+    }
+
+    .service-one-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .service-one-listItemBox {
+        margin:10px 0;
+    }
+    
+    .service-one-listItemHeading {
+        font-size:2.7em;
+    }
+
+    .service-one-listItemImg {
+        width: 800px !important;
+        height: 1200px!important;
+    }
+
+
+    .service-two-section {
+        /* border: orangered dashed medium; */
+        
+    }
+
+    .service-two-container {
+        /* width:80%; */
+        /* width:auto; */
+        /* border: orangered dashed medium; */
+        
+    }
+
+    .service-two-listItemBox {
+        margin:40px 0;
+    }
+
+    .service-two-listItemHeading {
+        font-size:2.7em;
+    }
+
+    .service-two-listItemImg {
+        width:600px;
+        height:600px;
+    }
+
+    .service-hairRemMen-section-one-heading-box {
+        padding:50px 0;
+        align-items: center;
+        /* border: orangered dashed medium; */
+    }
+
+    .service-hairRemMen-section-one-main-heading {
+        font-size: 3em;
+    }
+
+    .service-hairRemMen-section-one-text-box {
+        width:100%;
+        padding:0 20px;
+        font-size:2em;
+    }
+
+    .service-hairRemMen-section-one-img-box {
+        /* padding:40px 0; */
+        padding: 20px 0!important;
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-hairRemMen-section-one-content-img {
+        width:80%!important;
+        height:80%!important;
+    }
+
+    .service-hairRemMen-section-two-main-heading {
+        font-size: 3em;
+        text-align: center; 
+        padding:20px;
+    }
+
+    .service-hairRemMen-section-two-content-img-box {
+        justify-content: center;
+        width:100%;
+    }
+    
+    .service-hairRemMen-section-two-main-content-img {
+        width:800px;
+        height:1000px;
+    }
+
+    .service-hairRemMen-section-two-central-box {
+        width: 100%;
+        font-size: 2em; 
+    }
+
+    .service-hairRemMen-section-two-privacy-statement-heading {
+        font-size: 2em; 
+        padding:20px;   
+    }
+
+    .service-hairRemMen-section-two-privacy-statement-subHeading {
+        text-align: left;
+        padding:20px;
+    }
+
+    .service-hairRemMen-section-two-right-box {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    .service-hairRemMen-section-two-right-img-box {
+        flex-wrap:wrap;
+    }
+
+    .service-hairRemMen-section-two-content-img {
+        width:400px;
+        height:600px;
+        object-fit: cover;
+        padding-bottom:20px;
+    }
+
+    .service-hairRemMen-section-three-img-box {
+        flex-wrap:wrap;
+    }
+
+    .service-hairRemMen-section-three-content-img {
+        width: 100%;
+        height:100%;
+        padding:60px 0;
+    }
+
+    .service-hairRemMen-section-three-text-box {
+        font-size: 2em;
+    }
+
+    .service-hairRemMen-section-three-list-column {
+        width:100%;
+    }
+
+    .service-hairRemMen-section-four-main-text-box {
+        width:100%;
+        font-size: 2em;
+    }
+
+    .service-hairRemWomen-section-one {
+        /* border: goldenrod dashed medium; */
+        padding:0;
+        
+    }
+
+    .service-hairRemWomen-section-one-background-video {
+        /* border: orangered dashed medium; */
+    
+        /* width:1920px; */
+        
+    }
+
+    .service-hairRemWomen-section-one-heading {
+        /* position: relative;
+        top:0; */
+
+        top:15rem;
+        bottom:auto;
+        font-size: 1.5em;
+    }
+
+    .service-hairRemWomen-section-two{
+        min-height:none;
+    }
+
+    .service-hairRemWomen-section-two-container {
+        flex-wrap: wrap;
+    }
+
+    .service-hairRemWomen-section-two-left-content-box {
+        width:100%;
+
+        /* border: goldenrod dashed medium; */
+    }
+
+    .service-hairRemWomen-section-two-content-img {
+        width: 100%;
+        height:auto;
+        /* border: goldenrod dashed medium; */
+    }
+
+    .service-hairRemWomen-section-two-left-text-box {
+        width:auto;
+        font-size: 1.5em;
+        padding:100px 20px;
+    }
+
+    .service-hairRemWomen-section-two-right-content-box {
+        border: goldenrod dashed medium;
+        font-size: 2em;
+    }
+
+    .service-hairRemWomen-section-three {
+        min-height:none;
+    }
+
+    .service-hairRemWomen-section-three-left-content-box {
+        width:auto;
+    }
+    .service-hairRemWomen-section-three-right-content-box {
+        display:none;
+    }
+
+    .service-hairRemWomen-section-three-main-heading {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .service-hairRemWomen-section-three-text-container {
+        
+    }
+
+    .service-hairRemWomen-section-three-text-box {
+        width:100%;
+        padding:20px;
+    }
+
+    .service-hairRemWomen-section-four-main-heading {
+        background: rgba(0, 0, 0, 0.5);
+        padding:20px;
+    }
+
+    .service-hairRemWomen-section-four-content-img {
+        width: 100%;
+        height:100%;
+        padding:40px 0;
+        border-radius: 0;
+    }
+
+    .service-hairRemWomen-section-four-text-box {
+        font-size:1.5em;
+    }
+
+    .service-hairRemWomen-section-four-list-column {
+        padding:60px;
+    }
+
+
+    .footer-container {
+        font-size: 2em;
+    }
+
+}
