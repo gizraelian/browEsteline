@@ -1,0 +1,27 @@
+# Sensitive certificate material: never commit
+generated-private-key.txt
+**/generated-private-key.txt
+generated-csr.txt
+**/generated-csr.txt
+*.key
+*.pem
+*.p12
+*.pfx
+*.csr
+
+# Local tooling and OS files
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Deployment archives are generated locally
+*.deploy.zip
+*.zip
+
+# Preserved local legacy/experimental trees are not part of the lightweight
+# canonical static-site repository. Their locations are documented separately.
+/angular/
+/angularJS/
+/media/
+/esteline.txt
