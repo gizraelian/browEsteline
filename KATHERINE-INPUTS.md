@@ -12,7 +12,7 @@ Missing items do not block local development. Items marked **required before lau
 
 ## Business information
 
-- **Required before launch:** complete email address. The live site only says `Info@Esteline`.
+- Confirmed: `BrowEsteline@gmail.com` is the current business email.
 - **Required before launch:** confirm 416-786-1101 for phone and WhatsApp.
 - **Required before launch:** confirm 4646 Dufferin St., Unit 3, Toronto, ON M3H 5S4.
 - **Required before launch:** confirm Mon–Thu 10am–8pm and Fri–Sun 10am–4pm.
@@ -23,7 +23,7 @@ Missing items do not block local development. Items marked **required before lau
 
 ## Content
 
-- **Required before launch:** approve all prices and booking-policy amounts preserved from the current site.
+- Reconfirm all prices and booking-policy amounts preserved from the current site during the next content review.
 - Confirm treatment-preparation and aftercare wording.
 - Confirm treatment-duration statements.
 - Confirm any credentials/certifications Katherine wants displayed.
@@ -41,7 +41,7 @@ Missing items do not block local development. Items marked **required before lau
 
 - **Required before enabling tracking:** owner/legal approval of privacy and consent wording.
 - Confirm which marketing platforms will be enabled.
-- Confirm a business privacy contact after the email address is known.
+- Confirm whether `BrowEsteline@gmail.com` should remain the long-term privacy contact.
 
 ## Deployment
 

@@ -67,7 +67,7 @@ Open `http://localhost:8080/`. Do not open the HTML files directly because root-
 - Page copy and metadata live in each route’s `index.html`.
 - Shared navigation/footer markup lives in `site/assets/js/shell.js`.
 - Contact information appears in `shell.js`, `contact/index.html`, homepage JSON-LD and possibly `KATHERINE-INPUTS.md`; update these together after verification.
-- The incomplete `Info@Esteline` is intentionally not an active `mailto:` link.
+- The confirmed business email is `BrowEsteline@gmail.com`; update the contact page, footer, JSON-LD and privacy/booking contact wording together if it changes.
 
 ## Replacing or adding photos
 
@@ -189,7 +189,7 @@ This is intentionally a simple static site. Preserve that constraint.
 - Do not introduce React, Vue, Angular, a CSS framework or a build pipeline for ordinary content changes.
 - Keep each service crawlable at its own static URL.
 - Keep tracking disabled until real IDs and privacy wording are approved.
-- Never infer an email domain, booking URL, social handle, certification, award, medical claim or price.
+- Never infer a booking URL, social handle, certification, award, medical claim or price.
 - Preserve unique originals and generate optimized copies rather than overwriting them.
 - Keep old hash migration support in the root page.
 - Update canonicals, metadata, JSON-LD, internal links, sitemap and media inventory together when relevant.

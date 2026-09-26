@@ -53,7 +53,7 @@ No hosted files were changed or downloaded.
 - PMU branches into five real service pages: brows, lips, eyeliner, areola reconstruction and scar camouflage.
 - Phone and address are plain text on the old site; the rebuild adds proper phone and WhatsApp links.
 - The embedded map is valid and identifies postal code `M3H 5S4`. This is the authoritative map source used for structured data.
-- The displayed `Info@Esteline` is incomplete and is not converted into an email link.
+- The previous live site displayed the incomplete `Info@Esteline`; Katherine has since confirmed `BrowEsteline@gmail.com` for the rebuilt site.
 - No verified booking platform, Instagram URL, Facebook URL, contact form endpoint or Google Business Profile URL exists in the production source.
 - No existing marketing pixel or analytics integration was found.
 
