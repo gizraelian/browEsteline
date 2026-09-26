@@ -1,6 +1,6 @@
 # Katherine Inputs
 
-Missing items do not block local development. Items marked **required before launch** affect production accuracy.
+These follow-up items do not block the deployed static site.
 
 ## Tracking
 
@@ -13,9 +13,9 @@ Missing items do not block local development. Items marked **required before lau
 ## Business information
 
 - Confirmed: `BrowEsteline@gmail.com` is the current business email.
-- **Required before launch:** confirm 416-786-1101 for phone and WhatsApp.
-- **Required before launch:** confirm 4646 Dufferin St., Unit 3, Toronto, ON M3H 5S4.
-- **Required before launch:** confirm Mon–Thu 10am–8pm and Fri–Sun 10am–4pm.
+- Reconfirm 416-786-1101 for phone and WhatsApp during the next owner review.
+- Reconfirm 4646 Dufferin St., Unit 3, Toronto, ON M3H 5S4 during the next owner review.
+- Reconfirm Mon–Thu 10am–8pm and Fri–Sun 10am–4pm during the next owner review.
 - Confirm active and retired services.
 - Current booking platform and exact booking URL.
 - Current Instagram, Facebook and other social URLs.
@@ -45,6 +45,7 @@ Missing items do not block local development. Items marked **required before lau
 
 ## Deployment
 
-- Decide initial deployment method: staged File Manager/SFTP (recommended first launch) or cPanel Git.
-- Confirm backup retention and who owns rollback responsibility.
+- Decide how long to retain the dated cPanel backup and retired AngularJS folder.
+- Decide who owns future production deployments and rollback responsibility.
+- Decide whether to adopt cPanel Git after the rebuilt Git repository is established as the source of truth.
 - Decide whether the exposed local SSL private key should be rotated or securely archived.

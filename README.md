@@ -148,23 +148,24 @@ The root page contains a small hash migration map for the old AngularJS bookmark
 
 ## GoDaddy deployment assessment
 
-Read-only inspection confirmed:
+Production inspection and the 2026-09-26 deployment confirmed:
 
 - GoDaddy Economy Web Hosting
 - active cPanel and SSL
 - document root `/home/ovrexbhl3fmg/public_html`
 - File Manager, FTP, backups, Git Version Control and SSH Access are available
 
-Recommended first deployment:
+The first static deployment was completed through cPanel File Manager:
 
-1. Obtain Katherine’s required confirmations.
-2. Create/download a fresh cPanel backup.
-3. Inspect and save the existing hidden `.htaccess` if present.
-4. Upload `site/` to a staging directory through SFTP or File Manager.
-5. Test routes, headers, SSL and old hash URLs.
-6. Only after explicit deployment approval, swap the public files.
+1. The previous `public_html` was archived at `/home/ovrexbhl3fmg/esteline-pre-static-deployment-2026-09-26-160142.zip` (418.18 MB).
+2. The static package was tested under `public_html/_staging/`.
+3. The old frontend and staging copy were moved intact to `/home/ovrexbhl3fmg/esteline-angularjs-retired-2026-09-26-160142/`.
+4. The contents of `site/` were extracted directly into `/home/ovrexbhl3fmg/public_html`.
+5. All 15 pages, production SEO files, internal resources, mobile navigation and representative legacy hash routes were verified over HTTPS. Rollback was not required.
 
-cPanel Git can support later automation. It should use a dedicated deployment branch or repository and a controlled deploy hook that publishes only `site/`. Do not connect the old GitHub snapshot until the new authoritative repository is established. GitHub Actions over SFTP is possible but adds credentials and moving parts; cPanel Git or simple SFTP is more appropriate here.
+Run `node scripts/verify-production.mjs` after future deployments. It checks HTTP status, titles, descriptions, canonicals, H1 counts, JSON-LD syntax, internal resource responses, `robots.txt`, `sitemap.xml` and disabled tracking.
+
+cPanel Git can support later automation. It should use a dedicated deployment branch or repository and a controlled deploy hook that publishes only `site/`. GitHub Actions over SFTP is possible but adds credentials and moving parts. Keep the tested File Manager/SFTP workflow for now; once the rebuilt repository is the agreed source of truth, cPanel Git is the simplest automation candidate because the hosting plan already exposes it. Do not enable push-to-production automation without a separate approval and rollback test.
 
 ## Rollback
 
