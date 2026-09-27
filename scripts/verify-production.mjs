@@ -1,4 +1,4 @@
-const base = "https://www.esteline.ca";
+const base = (process.env.SITE_BASE || "https://www.esteline.ca").replace(/\/$/, "");
 const paths = [
   "/",
   "/services/",
