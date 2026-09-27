@@ -50,7 +50,7 @@ class SiteFooter extends HTMLElement {
       </footer>
       <aside class="consent" data-consent role="dialog" aria-label="Marketing cookie choice">
         <h2>Privacy choice</h2><p>With your permission, Brow Esteline may use optional marketing analytics. The site works normally without them.</p>
-        <div class="actions"><button class="button" type="button" data-consent-accept>Allow</button><button class="button button--ghost" type="button" data-consent-reject>Decline</button><a href="/privacy/">Learn more</a></div>
+        <div class="actions"><button class="button" type="button" data-consent-accept>Allow</button><button class="button button--ghost" type="button" data-consent-reject>Decline</button><a href="/privacy/">Privacy details</a></div>
       </aside>`;
   }
 }
