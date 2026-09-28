@@ -6,7 +6,7 @@ Audit date: 2026-09-26
 
 The authoritative local source is `angularJS/browEsteline`, specifically its `dist/` output. It is newer and more complete than `angularJS/SEO`, the old GitHub snapshot, and the nearby experimental Angular projects.
 
-Read-only cPanel inspection confirmed that the deployed document root is `/home/ovrexbhl3fmg/public_html`. Its structure and modification dates match the local April 6, 2024 production build:
+Read-only cPanel inspection confirmed that the deployed document root is `public_html`. Its structure and modification dates match the local April 6, 2024 production build:
 
 - `assets/`
 - `partials/`
@@ -92,13 +92,13 @@ The new root page maps these fragments in the browser with `location.replace()`.
 
 - GoDaddy Web Hosting, Economy plan, active.
 - cPanel 134.0.60; primary domain `esteline.ca`.
-- Document root: `/home/ovrexbhl3fmg/public_html`.
-- Home directory: `/home/ovrexbhl3fmg`.
+- Document root: `public_html`.
+- Home directory: the cPanel account home, outside the public document root.
 - SSL status: active.
 - File Manager, FTP Accounts, Backup/Backup Wizard, Git Version Control and SSH Access are available.
 - Public root currently contains no visible `.htaccess`; File Manager was not configured to reveal dotfiles, so this is not proof that none exists.
 - cPanel Git makes Git-based deployment technically possible. For this small static site, the safest first launch is still a versioned archive plus staged File Manager/SFTP replacement. Git automation can follow after a tested cPanel repository and deploy hook are configured.
 
-## Sensitive certificate files
+## Certificate hygiene
 
-`angularJS/generated-private-key.txt` is present locally and excluded by `.gitignore`. Its contents were not displayed, copied or uploaded. `generated-csr.txt` is nearby. File presence alone cannot prove that this key backs the currently active GoDaddy SSL certificate. Securing or rotating it should be handled as a separate explicit task.
+Legacy certificate-generation artifacts remain local and excluded by `.gitignore`. Their contents were not displayed, copied, uploaded or committed, and the local key does not match the certificate currently served by the site. Retain the artifacts securely only if they are still needed.

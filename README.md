@@ -152,15 +152,15 @@ Production inspection and the 2026-09-26 deployment confirmed:
 
 - GoDaddy Economy Web Hosting
 - active cPanel and SSL
-- document root `/home/ovrexbhl3fmg/public_html`
+- document root `public_html`
 - File Manager, FTP, backups, Git Version Control and SSH Access are available
 
 The first static deployment was completed through cPanel File Manager:
 
-1. The previous `public_html` was archived at `/home/ovrexbhl3fmg/esteline-pre-static-deployment-2026-09-26-160142.zip` (418.18 MB).
-2. The static package was tested under `public_html/_staging/`.
-3. The old frontend and staging copy were moved intact to `/home/ovrexbhl3fmg/esteline-angularjs-retired-2026-09-26-160142/`.
-4. The contents of `site/` were extracted directly into `/home/ovrexbhl3fmg/public_html`.
+1. The previous `public_html` was archived outside the public document root.
+2. The static package was tested in a temporary staging directory.
+3. The old frontend and staging copy were retained outside the public document root.
+4. The contents of `site/` were extracted directly into `public_html`.
 5. All 15 pages, production SEO files, internal resources, mobile navigation and representative legacy hash routes were verified over HTTPS. Rollback was not required.
 
 Run `node scripts/verify-production.mjs` after future deployments. It checks HTTP status, titles, descriptions, canonicals, H1 counts, JSON-LD syntax, internal resource responses, `robots.txt`, `sitemap.xml` and disabled tracking.
@@ -173,7 +173,7 @@ Follow [PRESERVATION.md](PRESERVATION.md). The essential rule is to create a fre
 
 ## Security rules
 
-- Never commit or deploy `generated-private-key.txt`, `*.key`, `*.pem`, `*.p12` or `*.pfx`.
+- Never commit or deploy private keys or certificate requests, including `*.key`, `*.pem`, `*.p12`, `*.pfx` or `*.csr`.
 - Never store GoDaddy, Meta, Google, FTP or SSH credentials in this repository.
 - Public tracking IDs belong only in `tracking-config.js` after deliberate approval.
 - Keep directory listing disabled.

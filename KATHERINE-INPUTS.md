@@ -48,4 +48,4 @@ These follow-up items do not block the deployed static site.
 - Decide how long to retain the dated cPanel backup and retired AngularJS folder.
 - Decide who owns future production deployments and rollback responsibility.
 - Decide whether to adopt cPanel Git after the rebuilt Git repository is established as the source of truth.
-- Decide whether the exposed local SSL private key should be rotated or securely archived.
+- Decide whether legacy local certificate-generation material should be securely archived or removed after confirming it is no longer needed.

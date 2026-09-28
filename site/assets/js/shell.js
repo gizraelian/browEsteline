@@ -45,7 +45,7 @@ class SiteFooter extends HTMLElement {
             <div><h2>Visit</h2><p>4646 Dufferin St., Unit 3<br>Toronto, ON M3H 5S4<br><small>Parking and entrance at the back.</small></p><p><a href="mailto:BrowEsteline@gmail.com" data-track="Contact" data-track-action="email_footer">BrowEsteline@gmail.com</a><br><a href="/contact/">Map and hours</a></p></div>
             <div><h2>Explore</h2><nav class="footer-links" aria-label="Footer navigation"><a href="/services/">Services</a><a href="/about/">About Katherine</a><a href="/booking-policy/">Booking policy</a><a href="/privacy/">Privacy &amp; tracking</a></nav></div>
           </div>
-          <div class="footer-bottom"><span>© <span data-year></span> Esteline. All rights reserved.</span></div>
+          <div class="footer-bottom"><span>© <span data-year></span> Brow Esteline. All rights reserved.</span></div>
         </div>
       </footer>
       <aside class="consent" data-consent role="dialog" aria-label="Marketing cookie choice">

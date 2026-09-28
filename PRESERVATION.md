@@ -5,8 +5,7 @@
 - Primary local production source: `angularJS/browEsteline/`
 - Built production copy: `angularJS/browEsteline/dist/`
 - Existing local backup archives: `angularJS/backups/`
-- cPanel root-level backup artifact: `/home/ovrexbhl3fmg/dist.zip` (observed only)
-- cPanel public-root artifact: `/home/ovrexbhl3fmg/public_html/dist.zip` (observed only)
+- Legacy cPanel backup artifacts were observed during the original audit; do not rely on them for rollback.
 
 The rebuild is isolated in `site/`. No original source, backup, remote repository, hosted file, DNS record or SSL setting was modified.
 
