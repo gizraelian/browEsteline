@@ -32,6 +32,8 @@ for (const route of routes) {
   if (canonical !== `${origin}${route}`) failures.push(`${route}: incorrect canonical ${canonical || '(missing)'}`);
   if ((html.match(/<h1\b/gi) || []).length !== 1) failures.push(`${route}: must contain exactly one H1`);
   if (/noindex/i.test(html)) failures.push(`${route}: contains noindex`);
+  if ((html.match(/\/assets\/js\/tracking-config\.js\?v=20260928a/g) || []).length !== 1) failures.push(`${route}: must load the cache-busted tracking config exactly once`);
+  if ((html.match(/\/assets\/js\/site\.js\?v=20260928a/g) || []).length !== 1) failures.push(`${route}: must load the cache-busted site script exactly once`);
   for (const block of html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
     try { JSON.parse(block[1]); } catch { failures.push(`${route}: invalid JSON-LD`); }
   }
@@ -54,13 +56,22 @@ if (/disallow:\s*\//i.test(robots)) failures.push('robots.txt blocks indexing');
 const sitemap = readFileSync(resolve(root, 'sitemap.xml'), 'utf8');
 for (const route of routes) if (!sitemap.includes(`<loc>${origin}${route}</loc>`)) failures.push(`sitemap missing ${route}`);
 const tracking = readFileSync(resolve(root, 'assets/js/tracking-config.js'), 'utf8');
-if (!/enabled:\s*false/.test(tracking)) failures.push('tracking is not explicitly disabled');
-if (/G-[A-Z0-9]+|GTM-[A-Z0-9]+|UA-\d|AW-\d|fbq\s*\(\s*["']init/i.test(tracking)) failures.push('tracking configuration contains an active-looking identifier');
+if (!/enabled:\s*true/.test(tracking)) failures.push('tracking is not explicitly enabled');
+if (!/consentRequired:\s*true/.test(tracking)) failures.push('marketing consent is not required');
+if (!/metaPixelId:\s*["']2588326998328560["']/.test(tracking)) failures.push('Meta Pixel ID is missing or incorrect');
+if (!/googleMeasurementId:\s*["']["']/.test(tracking)) failures.push('Google Analytics must remain unconfigured');
+
+const siteJs = readFileSync(resolve(root, 'assets/js/site.js'), 'utf8');
+if ((siteJs.match(/fbq\('init'/g) || []).length !== 1) failures.push('Meta Pixel must have exactly one init path');
+if ((siteJs.match(/fbq\('track', 'PageView'\)/g) || []).length !== 1) failures.push('Meta Pixel must have exactly one PageView path');
+if (!/if \(!config\.consentRequired \|\| consent === 'accepted'\) loadTracking\(\)/.test(siteJs)) failures.push('tracking is not gated by stored consent');
+if (!/fbq\('track', eventName, safeProperties\)/.test(siteJs)) failures.push('Meta events are not sent as standard events');
+if (/facebook\.com\/tr\?/.test(combined)) failures.push('a noscript Meta pixel would bypass JavaScript consent');
 
 if (failures.length) {
   console.error(`FAIL (${failures.length})`);
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exitCode = 1;
 } else {
-  console.log(`PASS local verification: ${routes.length} pages, links/assets, SEO, JSON-LD, robots, sitemap, copy scan and disabled tracking`);
+  console.log(`PASS local verification: ${routes.length} pages, links/assets, SEO, JSON-LD, robots, sitemap, copy scan and consent-gated Meta tracking`);
 }

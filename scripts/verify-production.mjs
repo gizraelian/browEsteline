@@ -350,10 +350,14 @@ try {
 if (trackingResponse) {
   if (isHostingChallenge(tracking)) {
     failures.push("tracking-config.js: hosting challenge encountered (HTTP 200 masquerade)");
-  } else if (trackingResponse.status !== 200 || !/enabled:\s*false/.test(tracking)) {
-    failures.push("tracking is not explicitly disabled");
-  } else if (/G-[A-Z0-9]+|GTM-[A-Z0-9]+|fbq\s*\(\s*["']init/i.test(tracking)) {
-    failures.push("tracking config contains a production-style ID/init call");
+  } else if (trackingResponse.status !== 200 || !/enabled:\s*true/.test(tracking)) {
+    failures.push("tracking is not explicitly enabled");
+  } else if (!/consentRequired:\s*true/.test(tracking)) {
+    failures.push("marketing consent is not required");
+  } else if (!/metaPixelId:\s*["']2588326998328560["']/.test(tracking)) {
+    failures.push("Meta Pixel ID is missing or incorrect");
+  } else if (!/googleMeasurementId:\s*["']["']/.test(tracking)) {
+    failures.push("Google Analytics must remain unconfigured");
   }
   if (!isHostingChallenge(tracking)) {
     await compareToLocal(tracking, "assets/js/tracking-config.js", "tracking-config.js");

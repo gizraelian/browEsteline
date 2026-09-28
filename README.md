@@ -118,25 +118,28 @@ The single configuration location is:
 
 `site/assets/js/tracking-config.js`
 
-Defaults:
+Current production configuration:
 
 ```js
-enabled: false
-metaPixelId: ""
+enabled: true
+consentRequired: true
+metaPixelId: "2588326998328560"
 googleMeasurementId: ""
 ```
 
-To enable a platform later, enter its public ID and set `enabled: true`. Do not add secrets or account credentials. Direct Meta Pixel and direct Google Analytics loading are already supported. GTM is not adopted because it adds another management layer; it becomes worthwhile only if Katherine expects several frequently changing marketing tags.
+Meta Pixel is enabled with its public browser-side ID and loads only after marketing consent. Do not add secrets or account credentials. Direct Google Analytics loading remains supported but is not configured. GTM is not adopted because it adds another management layer; it becomes worthwhile only if Katherine expects several frequently changing marketing tags.
 
-Tracking never controls normal site functionality. Prepared generic events include `PageView` when a provider loads and `Contact` for phone/WhatsApp actions. Add booking-link tracking only after a real URL exists. A booking-link click must not be recorded as `Schedule`; that event requires an actual reliable completion signal.
+Tracking never controls normal site functionality. Meta receives one `PageView` when it loads after consent and the standard `Contact` event for tracked phone, email and WhatsApp actions. No `<noscript>` tracking image is included because it would bypass the JavaScript consent gate. Add booking tracking only after a real booking flow provides a reliable completion signal; a booking-link click alone must not be recorded as `Schedule`.
+
+Run `node scripts/test-tracking.mjs` to exercise consent rejection/acceptance, the async Meta loader, duplicate prevention and a representative `Contact` event.
 
 Never transmit treatment details, form content, health information or appointment details.
 
 ## Consent and privacy
 
-When tracking is disabled or no public provider ID exists, no marketing script loads and no banner appears. When tracking is configured and consent is required, the banner appears before any provider is loaded. The choice is stored in local storage under `esteline-marketing-consent`.
+When tracking is configured and consent is required, the banner appears before any provider is loaded. The choice is stored in local storage under `esteline-marketing-consent`. Visitors with an existing accepted choice load Meta on later page visits; visitors with a rejected choice do not.
 
-Visitors who decline retain all site functionality. The draft wording in `/privacy/` requires business-owner/legal approval before tracking is enabled.
+Visitors who decline retain all site functionality. The privacy page describes the optional marketing analytics and the limited events sent.
 
 ## SEO
 
@@ -163,7 +166,7 @@ The first static deployment was completed through cPanel File Manager:
 4. The contents of `site/` were extracted directly into `public_html`.
 5. All 15 pages, production SEO files, internal resources, mobile navigation and representative legacy hash routes were verified over HTTPS. Rollback was not required.
 
-Run `node scripts/verify-production.mjs` after future deployments. It checks HTTP status, titles, descriptions, canonicals, H1 counts, JSON-LD syntax, internal resource responses, `robots.txt`, `sitemap.xml` and disabled tracking.
+Run `node scripts/verify-production.mjs` after future deployments. It checks HTTP status, titles, descriptions, canonicals, H1 counts, JSON-LD syntax, internal resource responses, `robots.txt`, `sitemap.xml` and the consent-gated Meta configuration.
 
 cPanel Git can support later automation. It should use a dedicated deployment branch or repository and a controlled deploy hook that publishes only `site/`. GitHub Actions over SFTP is possible but adds credentials and moving parts. Keep the tested File Manager/SFTP workflow for now; once the rebuilt repository is the agreed source of truth, cPanel Git is the simplest automation candidate because the hosting plan already exposes it. Do not enable push-to-production automation without a separate approval and rollback test.
 
@@ -189,7 +192,7 @@ This is intentionally a simple static site. Preserve that constraint.
 - Maintain the current-site lineage: warm plum/mauve/lavender palette, image-led services, Services/Contact/About navigation and real Brow Esteline media.
 - Do not introduce React, Vue, Angular, a CSS framework or a build pipeline for ordinary content changes.
 - Keep each service crawlable at its own static URL.
-- Keep tracking disabled until real IDs and privacy wording are approved.
+- Keep marketing providers consent-gated and update the privacy wording when tracked data or providers change.
 - Never infer a booking URL, social handle, certification, award, medical claim or price.
 - Preserve unique originals and generate optimized copies rather than overwriting them.
 - Keep old hash migration support in the root page.

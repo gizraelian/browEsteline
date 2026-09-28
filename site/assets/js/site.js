@@ -28,13 +28,25 @@
     window.__estelineTrackingLoaded = true;
 
     if (config.metaPixelId) {
-      window.fbq = window.fbq || function(){ (window.fbq.q = window.fbq.q || []).push(arguments); };
+      if (!window.fbq) {
+        const fbq = function(){
+          if (fbq.callMethod) fbq.callMethod.apply(fbq, arguments);
+          else fbq.queue.push(arguments);
+        };
+        window.fbq = fbq;
+        if (!window._fbq) window._fbq = fbq;
+        fbq.push = fbq;
+        fbq.loaded = true;
+        fbq.version = '2.0';
+        fbq.queue = [];
+
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        document.head.append(script);
+      }
       window.fbq('init', config.metaPixelId);
       window.fbq('track', 'PageView');
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://connect.facebook.net/en_US/fbevents.js';
-      document.head.append(script);
     }
 
     if (config.googleMeasurementId) {
@@ -52,7 +64,7 @@
   window.estelineTrack = (eventName, properties = {}) => {
     if (!window.__estelineTrackingLoaded) return;
     const safeProperties = { action: String(properties.action || 'website').slice(0, 40) };
-    if (window.fbq) window.fbq('trackCustom', eventName, safeProperties);
+    if (window.fbq) window.fbq('track', eventName, safeProperties);
     if (window.gtag) window.gtag('event', eventName, safeProperties);
   };
 
